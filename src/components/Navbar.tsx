@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <div className='container mx-auto flex justify-between py-7 px-3'>
+    <div className='container mx-auto flex justify-between py-7 px-3 sticky top-0'>
       <Link href={'/'}>
         <Text text='Jujurly' className='text-4xl font-bold' />
       </Link>

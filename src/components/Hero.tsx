@@ -23,7 +23,11 @@ export default function Hero() {
           text='Buat Vote Baru'
           onClick={() => router.push('/vote/create')}
         />
-        <Button text='Ikutan Vote' type='secondary' />
+        <Button
+          text='Ikutan Vote'
+          type='secondary'
+          onClick={() => router.push('/participant')}
+        />
       </div>
     </div>
   );

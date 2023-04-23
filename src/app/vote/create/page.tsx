@@ -10,6 +10,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import CandidateForm from '@/components/CandidateForm';
 import Plus from '@/assets/Plus';
 import Button from '@/components/Button';
+import Navbar from '@/components/Navbar';
 
 registerLocale('id', id);
 
@@ -53,11 +54,9 @@ export default function CreateVote() {
   }, [startDate]);
 
   return (
-    <div className='py-12'>
-      <Head>
-        <title>Voting Baru</title>
-      </Head>
-      <div className='container mx-auto px-5'>
+    <div className='container mx-auto px-2'>
+      <Navbar />
+      <div className=' px-5 py-12'>
         {/* Header Voting Baru */}
         <div className='flex flex-col gap-y-2 py-5'>
           <Image
