@@ -10,7 +10,9 @@ export default function Navbar() {
       <Link href={'/'}>
         <Text text='Jujurly' className='text-4xl font-bold' />
       </Link>
-      <Button text='Login' type='secondary' />
+      <Link href={'/login'}>
+        <Button text='Login' type='secondary' />
+      </Link>
     </div>
   );
 }

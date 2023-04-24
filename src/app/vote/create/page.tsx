@@ -1,16 +1,15 @@
 'use client';
 import Input from '@/components/Input';
 import Text from '@/components/Text';
-import Head from 'next/head';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import ReactDatePicker, { registerLocale } from 'react-datepicker';
 import id from 'date-fns/locale/id';
 import 'react-datepicker/dist/react-datepicker.css';
 import CandidateForm from '@/components/CandidateForm';
-import Plus from '@/assets/Plus';
 import Button from '@/components/Button';
 import Navbar from '@/components/Navbar';
+import { PlusIcon } from '@heroicons/react/24/outline';
 
 registerLocale('id', id);
 
@@ -127,7 +126,7 @@ export default function CreateVote() {
                 candidates.length < 1 ? 'self-center' : 'place-self-center'
               }`}
               onClick={() => addCandidates()}>
-              <Plus className='w-2/3 text-zinc-400' />
+              <PlusIcon className='w-2/3 text-zinc-400' />
             </div>
           </div>
         </div>

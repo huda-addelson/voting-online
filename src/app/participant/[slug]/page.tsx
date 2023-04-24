@@ -2,6 +2,7 @@
 import Button from '@/components/Button';
 import CandidateItems from '@/components/CandidateItems';
 import CountDownVote from '@/components/CountDown/CountDownVote';
+import ShowModal from '@/components/Modal';
 import Navbar from '@/components/Navbar';
 import Text from '@/components/Text';
 import React from 'react';
@@ -31,7 +32,19 @@ export default function DetailParticipant({ params }: Props) {
         {/* <Kandidat/> */}
 
         {/* Submit */}
-        <Button text='Kirim vote saya' className='rounded-md' />
+        <Button
+          text='Kirim vote saya'
+          className='rounded-md'
+          onClick={() =>
+            ShowModal({
+              open: true,
+              title: 'Apakah kamu yakin?',
+              message: 'Kamu akan memilih kandidat 1',
+              onPositiveClick() {},
+              positiveBtnText: 'Ya',
+            })
+          }
+        />
       </div>
     </div>
   );

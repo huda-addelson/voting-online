@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Input from './Input';
-import Remove from '@/assets/Remove';
+import { XCircleIcon } from '@heroicons/react/24/outline';
 
 interface Props {
   candidates: Candidate;
@@ -32,7 +32,7 @@ export default function CandidateForm({
       <div
         className='self-end cursor-pointer hover:text-zinc-500'
         onClick={() => removeCandidate(candidate.key)}>
-        <Remove className='w-6 h-6' />
+        <XCircleIcon className='w-6 h-6' />
       </div>
       <div className='self-center w-20 h-20 bg-zinc-200 rounded-full flex items-center justify-center font-bold text-2xl'>
         {candidates.key}
